@@ -25,7 +25,7 @@ const Home = () => {
   const fetchAuthors = async (pageToLoad = 1) => {
     try {
       const token = getToken();
-      const res = await fetch(`${process.env.REACT_APP_APYURL}/authors?page=${pageToLoad}&size=10`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/authors?page=${pageToLoad}&size=10`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -24,7 +24,7 @@ const BlogList = ({ search }) => {
       const pageToFetch = reset ? 1 : page;
 
       const res = await fetch(
-        `${process.env.REACT_APP_APYURL}/blogPost?size=${PAGE_SIZE}&page=${pageToFetch}${queryTitle}`,
+        `${process.env.REACT_APP_API_URL}/blogPost?size=${PAGE_SIZE}&page=${pageToFetch}${queryTitle}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ const BlogList = ({ search }) => {
     const fetchAuthors = async () => {
       try {
         const token = getToken();
-        const res = await fetch(`${process.env.REACT_APP_APYURL}/authors`, {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/authors`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

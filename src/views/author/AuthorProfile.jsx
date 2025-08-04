@@ -13,7 +13,7 @@ const AuthorProfile = () => {
 
   const fetchAuthor = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_APYURL}/authors/${id}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/authors/${id}`, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },

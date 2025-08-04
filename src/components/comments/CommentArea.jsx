@@ -14,7 +14,7 @@ const CommentArea = ({ postId }) => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${process.env.REACT_APP_APYURL}/comments/blogPosts/${postId}`,
+        `${process.env.REACT_APP_API_URL}/comments/blogPosts/${postId}`,
         {
           headers: {
             Authorization: `Bearer ${getToken()}`,
@@ -38,7 +38,7 @@ const CommentArea = ({ postId }) => {
     e.preventDefault();
     try {
       const res = await fetch(
-        `${process.env.REACT_APP_APYURL}/comments/blogPosts/${postId}`,
+        `${process.env.REACT_APP_API_URL}/comments/blogPosts/${postId}`,
         {
           method: "POST",
           headers: {

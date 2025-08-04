@@ -14,7 +14,7 @@ const AuthorMe = () => {
 
   const fetchUserData = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_APYURL}/auth/me`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/me`, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
@@ -29,7 +29,7 @@ const AuthorMe = () => {
       setUser(data);
 
       const postsRes = await fetch(
-        `${process.env.REACT_APP_APYURL}/authors/${data._id}/blogPosts`,
+        `${process.env.REACT_APP_API_URL}/authors/${data._id}/blogPosts`,
         {
           headers: {
             Authorization: `Bearer ${getToken()}`,

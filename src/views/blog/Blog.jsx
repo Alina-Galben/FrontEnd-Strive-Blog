@@ -21,7 +21,7 @@ const Blog = () => {
     const fetchBlog = async () => {
       try {
         const token = getToken();
-        const res = await fetch(`${process.env.REACT_APP_APYURL}/blogPost/${id}`, {
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/blogPost/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

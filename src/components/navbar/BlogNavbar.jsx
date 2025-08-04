@@ -12,7 +12,7 @@ const NavBar = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await fetch(`${process.env.REACT_APP_APYURL}/auth/me`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/auth/me`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
