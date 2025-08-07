@@ -76,7 +76,9 @@ const Blog = () => {
 
         <Row className="blog-details-container my-4">
           <Col md={6}>
-            <BlogAuthor {...author} />
+            {author && typeof author === "object" && (
+              <BlogAuthor {...author} />
+            )}
           </Col>
           <Col md={6} className="text-md-end">
             <div>{new Date(createdAt).toLocaleDateString()}</div>
